@@ -21,13 +21,18 @@ public class PlayerMovement : MonoBehaviour
         float inputX = Input.GetAxis("Horizontal");
         float inputZ = Input.GetAxis("Vertical");
         Vector3 movement = new Vector3(inputX, 0f, inputZ);
-        characterController.Move(movement * Time.deltaTime);
+       // characterController.Move(movement * Time.deltaTime);
 
         animator.SetFloat("Speed", movement.magnitude);
-        if (movement.magnitude > 0f)
+        /* if (movement.magnitude > 0f)
+         {
+             Quaternion tempDirection = Quaternion.LookRotation(movement);
+             transform.rotation = Quaternion.Slerp(tempDirection, transform.rotation, Time.deltaTime * rotationSpeed);
+         }*/
+        transform.Rotate(Vector3.up, inputX * rotationSpeed * Time.deltaTime);
+        if(inputZ!=0f)
         {
-            Quaternion tempDirection = Quaternion.LookRotation(movement);
-            transform.rotation = Quaternion.Slerp(tempDirection, transform.rotation, Time.deltaTime * rotationSpeed);
+            characterController.Move(transform.forward * Time.deltaTime*inputZ);
         }
     }
 }

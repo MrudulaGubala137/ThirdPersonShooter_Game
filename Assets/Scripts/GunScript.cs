@@ -13,9 +13,11 @@ public class GunScript : MonoBehaviour
     float damageRate=1f;
     float timer;
     public Transform firePoint;
+    public ParticleSystem particle;
+    AudioSource audio;
     void Start()
     {
-        
+       audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -35,6 +37,9 @@ public class GunScript : MonoBehaviour
     private void ToFireGun()
     {
         Debug.DrawRay(firePoint.position, transform.forward* 100,Color.red,2f);
+        Debug.Log("Drawn a ray");
+        audio.Play();
+        particle.Play();
         Ray ray = new Ray(firePoint.position, transform.forward);
         RaycastHit hitInfo;
         if(Physics.Raycast(ray, out hitInfo,100f))
@@ -47,4 +52,6 @@ public class GunScript : MonoBehaviour
             }
         }
     }
+    
+    
 }
