@@ -9,7 +9,7 @@ public class EnemyScript : MonoBehaviour
     [SerializeField] int startingHealth;
     [SerializeField] int currentHealth;
     NavMeshAgent agent;
-    public Transform target;
+    public GameObject target;
     void Start()
     {
         currentHealth = startingHealth;
@@ -21,7 +21,7 @@ public class EnemyScript : MonoBehaviour
     {
         if(target!=null)
         {
-            agent.SetDestination(target.position);   
+            agent.SetDestination(target.transform.position);   
         }
         
     }

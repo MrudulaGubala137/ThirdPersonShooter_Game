@@ -907,6 +907,7 @@ GameObject:
   - component: {fileID: 2651273067390614265}
   - component: {fileID: 42951701768978382}
   - component: {fileID: 2509509383018175491}
+  - component: {fileID: 396800157705685379}
   m_Layer: 0
   m_Name: EnemySci-Fi
   m_TagString: Enemy
@@ -1086,6 +1087,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &396800157705685379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7852058128672921498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ec6509f3c18d6f4c9a81e85386afe6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 10
+  currentHealth: 10
+  target: {fileID: 5937427566064133251, guid: b22eefcd02ebc6448820b76cb11d60b9, type: 3}
 --- !u!1 &7852058128672921500
 GameObject:
   m_ObjectHideFlags: 0
