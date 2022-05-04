@@ -33,7 +33,7 @@ public class ObjectPoolScript : MonoBehaviour
         {
             for (int i = 0; i < item.amount; i++)
             {
-                GameObject temp = Instantiate(item.prefab);
+                GameObject temp = Instantiate(item.prefab,this.transform.position,Quaternion.identity);
                 temp.SetActive(false);
                 pool.Add(temp);
 

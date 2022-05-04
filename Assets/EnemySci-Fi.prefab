@@ -1101,7 +1101,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 10
   currentHealth: 10
-  target: {fileID: 5937427566064133251, guid: b22eefcd02ebc6448820b76cb11d60b9, type: 3}
+  target: {fileID: 5937427566064133261, guid: b22eefcd02ebc6448820b76cb11d60b9, type: 3}
+  gotoDistance: 10
+  attackDistance: 3
+  anim: {fileID: 7852058129868682303}
+  currentState: 0
 --- !u!1 &7852058128672921500
 GameObject:
   m_ObjectHideFlags: 0

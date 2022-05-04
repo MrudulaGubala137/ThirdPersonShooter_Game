@@ -18,12 +18,12 @@ public class SpawnManager : MonoBehaviour
     {
        
             time = time + Time.deltaTime;
-            if (time > 3f)
+            if (time > 15f)
             {
                 
                 GameObject tempEnemy = (ObjectPoolScript.instance.GetObjectsFromPool("Enemy"));
 
-                tempEnemy.transform.position = tempEnemy.transform.position+new Vector3(Random.Range(-8.0f, 8f), 1f, Random.Range(-4.0f, 4f));
+                tempEnemy.transform.position = tempEnemy.transform.position;//+new Vector3(Random.Range(-8.0f, 8f), 1f, Random.Range(-4.0f, 4f));
                 tempEnemy.SetActive(true);
 
                 time = 0;
